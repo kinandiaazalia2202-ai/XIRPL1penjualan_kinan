@@ -25,6 +25,7 @@
                     <th style="min-width: 100px;" class="text-center">Total Harga
                     <th>Tanggal Jual</th>
                     <th>Nama Kasir</th>
+                    <th style="min-width: 210px;" class="text-center">OPSI
                 </tr>
                 <?php
                     $data = mysqli_query($koneksi, "SELECT penjualan.*, barang.nama_barang, barang.harga_jual, user.user_nama FROM penjualan JOIN barang ON penjualan.id_barang = barang.id_barang JOIN user ON penjualan.user_id = user.user_id ORDER BY id_jual DESC"); 
@@ -41,6 +42,12 @@
                         <td><b>Rp <?php echo number_format($d['total_harga'], 0, ',', '.'); ?></b></td>
                         <td><?php echo date('d-m-Y', strtotime($d['tgl_jual'])); ?></td>
                         <td><?php echo $d['user_nama']; ?></td>
+                        <td>
+                            <a href="penjualan_invoice.php?id=<?php echo $d['id_jual']; ?>" class="btn btn-sm btn-warning">INVOICE</a>
+                            <a href="penjualan_edit.php?id=<?php echo $d['id_jual']; ?>" class="btn btn-sm btn-info">EDIT</a>
+                            <a href="penjualan_hapus.php?id=<?php echo $d['id_jual']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Batalkan transaksi?')">Hapus</a>
+                        </td>
+                        </td>
                     </tr>
                 <?php 
                     } 

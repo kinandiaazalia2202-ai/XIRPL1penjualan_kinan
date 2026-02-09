@@ -50,7 +50,7 @@
                 <tr>
                     <th>Status</th>
                     <th>:</th>
-                    <td><div class='label label-success'>LUNAS</div></td>
+                    <td><div class='label label-success'>LUNAS / SELESAI</div></td>
                 </tr>
             </table>
 
