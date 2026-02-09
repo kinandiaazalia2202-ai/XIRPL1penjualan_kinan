@@ -29,6 +29,8 @@
                     <li><a href="barang.php"><i class="glyphicon glyphicon-briefcase"></i> Data Barang</a></li>
                     
                     <li><a href="penjualan.php"><i class="glyphicon glyphicon-random"></i> Penjualan</a></li>
+
+                    <li><a href="laporan.php"><i class="glyphicon glyphicon-list-alt"></i>Laporan</a></li>
                     
                     <li><a href="logout.php"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
                 </ul>
